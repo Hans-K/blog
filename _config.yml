@@ -2,9 +2,9 @@ title: "Arduino: Interpreting whistle commands"
 author: "Hans Kruijsse"
 description: "Blogpage presenting an Arduino project of mine."
 more: "read more »"
-url: "https://niklasbuschmann.github.io/"
-baseurl: "/contrast"
-paginate:2
+url: "https://hans-k.github.io/"
+baseurl: "/blog"
+paginate: 2
 permalink: pretty
 excerpt_separator: "\n\n\n" # two blank lines
 
