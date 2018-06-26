@@ -107,3 +107,11 @@ nav, body > footer {
 .archive a {
   font-weight: 300;
 }
+
+ul {
+    list-style:none
+}
+
+li:before {
+    content: "- ";
+}
