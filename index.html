@@ -8,13 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/basic.css" rel="stylesheet">
-        <!--<link href="css/highlight.css" rel="stylesheet">-->
         <link href="css/index.css" rel="stylesheet">
     </head>
     
     <body>
         <header>
-            <!--<h1><a href="/blog">Arduino: Interpreting whistle commands</a></h1>-->
             <nav>
                 <div><a href="/blog/">Home</a><a href="/blog/archive/">Archive</a><a href="/blog/about/">About</a></div>
                 <div><a href="https://twitter.com/twitter/"><i class="fa fa-twitter"></i></a><a href="https://github.com/niklasbuschmann/contrast"><i class="fa fa-github"></i></a><a href="mailto:h.kruysse@gmail.com"><i class="fa fa-envelope"></i></a></div>
@@ -27,9 +25,36 @@
                     <h1><a href="">Project: Interpreting whistle commands with an Arduino</a></h1>
                     <time datetime="2018-06-22T12:00:00+00:00">June 22, 2018</time>
                 </header>
-                <p>Lorem <strong>ipsum dolor</strong> sit amet, consectetur adipiscing elit, <code class="highlighter-rouge">sed do eiusmod tempor</code> incididunt ut <em>labore</em> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <strong><em>exercitation</em></strong> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <em>irure dolor</em> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p>The term was coined in 1964 by two <a href="https://en.wikipedia.org/wiki/Australia">Australian</a> <a href="https://en.wikipedia.org/wiki/CSIRO">CSIRO</a> researchers, Isabel Joy Bear and Richard G. Thomas, for an article in the journal <a href="https://en.wikipedia.org/wiki/Nature_(journal)">Nature</a>. In the article, the authors describe how the smell derives from an oil exuded by certain <a href="https://en.wikipedia.org/wiki/Plants">plants</a> during dry periods, whereupon it is <a href="https://en.wikipedia.org/wiki/Absorption_(chemistry)">absorbed</a> by <a href="https://en.wikipedia.org/wiki/Clay">clay</a>-based <a href="https://en.wikipedia.org/wiki/Soil">soils</a> and <a href="https://en.wikipedia.org/wiki/Rock_(geology)">rocks</a>.</p>
-                <footer><a class="bead" href="">Button.</a></footer>
+                
+                <!-- Introduction -->
+                <p>Last March I went looking for inspiration to start a new, exciting Arduino project. Picky as I am, I wanted something (a) low-cost, (b) original, and (c) with an actual application in the real world.</p>
+                <p>I went through a couple of mediocre ideas until I saw this guy on YouTube that had recreated Yondu’s arrows from the Guardians of the Galaxy movies. The project focused mostly on the arrows, which launched using fireworks at a single whistle (and probably any loud sound). For me however, I was more interested in actually using complicated whistle commands to control something. Combining this idea with a tiny $10 drone I ordered a couple of weeks ago… you get the idea.</p>
+                
+                <h2>Usage and vision</h2>
+                <p>As of now, I have a working prototype for some basic whistle command detection. There’s not enough precision in it to steer a drone just yet, but enough to activate a fan, or a light switch. Or a music installation. Or a sunshade.</p>
+                <p>The list goes on, and I’m sure you have some ideas of your own as well. That’s why I’m sharing this project. For those who want to dive straight in: <a href="https://github.com/hans-k/whistle-command-interpreter">GitHub link</a>. Or read on for more on the hardware below.</p>
+                
+                <h2>Hardware</h2>
+                <p>The program exists of both a Java and an Arduino part, which means you will need to keep your Arduino connected to a computer for the functionality to work. This computer could be a Raspberry Pi, but (especially while testing) it might be handy to have something with a monitor.</p>
+                <p>Anyway, a comprehensive list of all the items you’ll need:
+                    <ul>
+                        <li>Computer that can run Java (monitor recommended)</li>
+                        <li>Arduino</li>
+                        <li>USB cable to connect them together</li>
+                        <li>Microphone (simple, see below)</li>
+                        <li>Wires (to connect the mic to the Arduino)</li>
+                    </ul>
+                </p>
+                <p>As stated, you’ll just need a very simple microphone component (one that reads decibels). I used the KY-038 which only costs about $2. If you want to go with a more advanced microphone for e.g. increased range, you can, but you may need to rewrite the Arduino part of the code.</p>
+                <img src="img/ky038.png" width="170px">
+                <p style="font-size:11px;margin-top:-10px;">The microphone component I used, a KY-038</p>
+                
+                <p>For more information on the responsibilities and possibilities of both parts, see the ‘Technical details’ section in the <a href="https://github.com/hans-k/whistle-command-interpreter">Github readme</a>. There’s also instructions on how to add your own whistle combinations and actuators to the Java code.</p>
+                <p>In closing, if you have been able to use this contraption for something, I’d love to hear about it! Feel free to comment below or contact me on GitHub. All questions, comments and contributions are warmly welcomed.</p>
+                <p>Repository link: <a href="https://github.com/hans-k/whistle-command-interpreter">https://github.com/hans-k/whistle-command-interpreter</a>.</p>
+                
+                
+                <!--<footer><a class="bead" href="">Button</a></footer>-->
             </article>
             
         </main>
